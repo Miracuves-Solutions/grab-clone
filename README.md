@@ -29,10 +29,10 @@ Demo credentials for all environments: **[miracuves.com/grab-clone → Demo sect
 Most super-app attempts stop at "single vertical." This platform ships with multiple verticals out of the box — same architecture Gojek and Grab run on:
 
 - **Modular Vertical Engine** — add or remove verticals (ride, food, parcel, pay) without redeploying — same architecture Gojek and Grab built on
-- **Unified Wallet & Identity** — 
-- **Cross-Vertical Loyalty** — one wallet works across all verticals, with cashback engine that credits back per vertical — what makes GrabPay and GoPay stick
-- **Dispatch-as-a-Service** — local payment, KYC, eKTP, KYC-by-selfie, utility bill providers pre-integrated per region
-- **Local Partner Integrations** — shared dispatch engine reusable across ride/parcel — not per-vertical
+- **Unified Wallet & Identity** — one wallet works across all verticals, with cashback engine that credits back per vertical — what makes GrabPay and GoPay stick
+- **Cross-Vertical Loyalty** — points earned in food can be redeemed in ride, parcel, etc. — drives cross-vertical retention
+- **Dispatch-as-a-Service** — shared dispatch engine reusable across ride/parcel — not per-vertical
+- **Local Partner Integrations** — local payment, KYC, eKTP, KYC-by-selfie, utility bill providers pre-integrated per region
 
 ## 📦 Core Features
 
