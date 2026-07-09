@@ -1,344 +1,119 @@
-# Grab Clone — White-Label Solution by Miracuves
+# Grab Clone — White-Label Multi-Service Super App Platform by Miracuves
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Try_Now-e8344f?style=for-the-badge)](https://mxgrab.mimeld.com)
-[![Solution Page](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/grab-clone/)
+[![Website](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/grab-clone/)
 [![Delivery](https://img.shields.io/badge/Go_Live-6_Working_Days-2ecc8f?style=for-the-badge)](https://miracuves.com/grab-clone/#pricing)
 [![Support](https://img.shields.io/badge/Support-60_Days_+_12mo_Updates-blue?style=for-the-badge)](https://miracuves.com/facts/)
 
+**MXGrab** is a production-ready, white-label Grab clone: a complete multi-service super app with ride, food, parcel, wallet, and admin console — delivered with **100% source code ownership** in **6 working days**.
+
+> 🌐 **See it running before you talk to anyone.** Live super-app with multiple verticals — demo credentials are printed on the [solution page](https://miracuves.com/grab-clone#demo). No sales call required.
+
 ---
 
-## Table of Contents
-
-1. [Who Is This For?](#who-is-this-for)
-2. [How It Works](#how-it-works)
-3. [Core Features](#core-features)
-4. [Architecture](#architecture)
-5. [Revenue Streams](#revenue-streams)
-6. [What's Included](#whats-included)
-7. [Deployment Timeline](#deployment-timeline)
-8. [Why Not Build From Scratch?](#why-not-build-from-scratch)
-9. [Market Opportunity](#market-opportunity)
-10. [Client Testimonials](#client-testimonials)
-11. [FAQ](#faq)
-12. [Resources](#resources)
-13. [About Miracuves](#about-miracuves)
-
-## Live Demos
+## 🚀 Live Demos
 
 | Environment | URL | What you can test |
 |---|---|---|
-| Web Platform | [mxgrab.mimeld.com](https://mxgrab.mimeld.com) | Full experience in the browser |
-| Mobile App (Android) | [mas.mimeld.com](https://mas.mimeld.com) | Browse, transact, engage |
-| Admin Dashboard | [Solution page → Demo](https://miracuves.com/grab-clone/#demo) | Users, content, plans, analytics |
+| 📱 Super App | [mas.mimeld.com](https://mas.mimeld.com) | Ride, food, parcel, pay, bill, booking — one app |
+| 🌐 Web Portal | [mxgrab.mimeld.com](https://mxgrab.mimeld.com) | Full super-app in browser |
+| 🛠️ Provider Dashboard | [Solution page → Demo](https://miracuves.com/grab-clone#demo) | Restaurant/driver/merchant ops & payouts |
+| 🏢 Admin Console | [Solution page → Demo](https://miracuves.com/grab-clone#demo) | Verticals, pricing, commissions, fraud, analytics |
 
-Demo credentials: [miracuves.com/grab-clone -> Demo section](https://miracuves.com/grab-clone/#demo)
-
-## What Makes This Grab Clone Different
-
-<!-- TODO: fill 3-5 vertical-specific differentiators -->
-
-## Who Is This For?
-
-| Buyer Type | Use Case |
-|---|---|
-| Founders | Launch a super app in SEA or emerging markets |
-| Taxi Operators | Digitize fleet with ride booking |
-| Agencies | White-label super app platform |
+Demo credentials for all environments: **[miracuves.com/grab-clone → Demo section](https://miracuves.com/grab-clone/#demo)**
 
 ---
 
-## How It Works
+## ✨ What Makes This Grab Clone Different
 
-1. Customer selects ride or food delivery
-2. For rides: nearest driver is dispatched
-3. For food: restaurant prepares, driver picks up
-4. Customer pays via wallet or card
-5. Ratings exchanged post-service
+Most super-app attempts stop at "single vertical." This platform ships with multiple verticals out of the box — same architecture Gojek and Grab run on:
 
----
+- **Modular Vertical Engine** — add or remove verticals (ride, food, parcel, pay) without redeploying — same architecture Gojek and Grab built on
+- **Unified Wallet & Identity** — 
+- **Cross-Vertical Loyalty** — one wallet works across all verticals, with cashback engine that credits back per vertical — what makes GrabPay and GoPay stick
+- **Dispatch-as-a-Service** — local payment, KYC, eKTP, KYC-by-selfie, utility bill providers pre-integrated per region
+- **Local Partner Integrations** — shared dispatch engine reusable across ride/parcel — not per-vertical
 
-## Core Features
+## 📦 Core Features
 
-### Customer App
-- Ride hailing
-- Food delivery
-- Grocery ordering
-- Parcel delivery
-- Bill payments
-- Digital wallet
-- Loyalty program
-- Service booking
+**User:** ride-hailing · food ordering · parcel delivery · bill pay · mobile recharge · bookings · wallet · loyalty · multi-language
 
-### Driver/Fleet App
-- Multi-service dispatch
-- Navigation
-- Earnings
-- Service toggle
+**Service Provider:** multi-vertical onboarding · order/ride/booking management · earnings dashboard · payouts · ratings · analytics
 
-### Vendor Panel
-- Service listings
-- Orders dashboard
-- Analytics
-- Promotions
+**Admin:** vertical management · commission engine · user support · fraud detection · analytics & reporting
 
-### Admin Panel
-- Service onboarding
-- Commission management
-- Analytics
-- User management
-
----
-
-## Advanced Features
-
-The platform integrates AI-powered features that reduce manual overhead and capture revenue opportunities:
-
-- **AI Dispatch** - Nearest driver matching
-- **AI ETA** - Accurate time estimates
-- **AI Demand** - Peak zone prediction
-- **AI Service Recommender** - Suggests services based on location/time
-- **AI Logistics Optimizer** - Smart multi-service routing
-- **AI Fraud Detection** - Secures transactions
-
----
-
-## Apps and Web Panels
-
-| Module | Description |
-|---|---|
-| Customer App | Rides, food, wallet |
-| Driver App | Pickup, deliver, earn |
-| Admin Panel | Operations, fees, analytics |
-
----
-
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 flowchart LR
-    A[Flutter Apps<br/>Android · iOS] --> G[REST API<br/>Laravel Backend]
-    W[Web Platform<br/>Responsive] --> G
-    P[Partner Panel] --> G
-    AD[Admin Dashboard] --> G
-    G --> DB[(MySQL)]
-    G --> S3[Object Storage]
+    A[Super App<br/>Flutter]
+    B[Web Portal<br/>Responsive]
+    W[Provider Dashboard]
+    AD[Admin Console]
+    A --> G[API Gateway<br/>Node.js/Laravel]
+    B --> G
+    W --> G
+    AD --> G
+    G --> V1[Ride Vertical<br/>Microservice]
+    G --> V2[Food Vertical<br/>Microservice]
+    G --> V3[Parcel Vertical<br/>Microservice]
+    G --> WALLET[Unified Wallet]
+    WALLET --> A
 ```
 
-**Stack:**
+**Stack:** Flutter mobile apps · Laravel or Node.js backend · MongoDB · Redis · per-vertical microservice with shared auth/wallet/payment · Stripe, Razorpay, regional gateways, mobile money, e-wallets
 
-| Layer | Technology |
-|---|---|
-| Mobile | Flutter |
-| Backend | Node.js |
-| Database | MongoDB |
-| Payments | Stripe, Razorpay |
+## 📋 What’s Included
 
----
+- ✅ Full source code — backend, web, mobile apps, panels (no encryption, no license locks)
+- ✅ Deployment to your servers & app store submission assistance
+- ✅ Your branding — white-label rename, logo, colors, domain
+- ✅ 60 days post-launch support + 12 months of free updates
+- ✅ Documentation & handover
 
-## Revenue Streams
+**Pricing:** from **$6,699**, transparent on the [solution page](https://miracuves.com/grab-clone/#pricing) — no "contact us for quote" games.
 
-The platform is engineered to generate revenue from day one through multiple complementary channels:
+## 🆚 Why Not Build From Scratch?
 
-- Commission per ride/order
-- Delivery fees
-- Wallet transaction fees
-- Commission per transaction
-- Subscription plans
-- Wallet float revenue
-- In-app advertising
-- Premium listings
+Custom super-apps run $300k–$2M and 12–24 months. A proven multi-vertical base gets you to market in 6 working days for a fraction of that, with your budget preserved for partner onboarding and growth marketing per vertical.
 
----
+## 📚 Resources
 
-## Security and Compliance
+- 📖 [Grab Clone — Full Solution Page](https://miracuves.com/grab-clone) (features, pricing, demos, FAQ)
+- 💰 [How Much Does a Super App Cost in 2026?](https://miracuves.com/grab-clone#pricing) pricing breakdown & what's included
+- 📝 [Best Grab Clone Script in 2026](https://miracuves.com/grab-clone/blog/) features, pricing & launch guide
+- 🧠 [Modular Vertical Architecture: Lessons from Gojek & Grab](https://miracuves.com/grab-clone/blog/) microservices for super-apps
+- ✅ [Miracuves Facts & Claims Ledger](https://miracuves.com/grab-clone/facts/) every claim we make, verified
 
-- OTP-based authentication
-- SSL/TLS encrypted API communication
-- GDPR-ready data handling
+## 🏢 About Miracuves
+
+[Miracuves Solutions](https://miracuves.com) builds white-label clone apps and custom software from Mumbai, India — 90+ ready-made solutions, live demos for every product, transparent pricing, and delivery in 6 working days. Operating since 2010.
+
+**Talk to us:** [WhatsApp](https://wa.me/919830009649) · [Schedule a consultation](https://miracuves.com/schedule-consultation/) · [miracuves.com](https://miracuves.com)
 
 ---
 
-## What's Included
+### ⚠️ Note on This Repository
 
-| Plan | Price | What You Get |
-|---|---|---|
-| Standard | **$6,699** | Complete source code, all apps, admin panel, rebranding, 1 year updates |
-| Enterprise | Custom Quote | Everything in Standard + custom features, multi-region, priority support |
+This repository is a product overview. The full source code is delivered to clients on purchase — see [what’s included](https://miracuves.com/grab-clone/#included). For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
 
-**What is included:**
-
-- Customer App
-- Driver App
-- Admin Panel
-- Full Source Code
-- Complete Rebranding (your logo, colors, app name)
-- Server Deployment
-- App Store and Google Play Submission Support
-- 60 Days Free Bug Support
-- Free 1-Year Updates
+*Keywords: grab clone, grab clone script, super app, multi-service, white label Gojek, multi-vertical, Flutter super app, Node.js microservices*
 
 ---
-**Pricing:** from **$2,899** — transparent on the [solution page](https://miracuves.com/grab-clone/#pricing).
-
-
-## Deployment Timeline
-
-| Day | Milestone |
-|---|---|
-| Day 1 | Server setup, environment configuration, initial deployment |
-| Day 2 | White-labeling - app name, logo, colors, splash screens |
-| Day 3 | Payment gateway integration + third-party API configuration |
-| Day 4 | Custom feature implementation (if applicable) |
-| Day 5 | QA, testing, bug fixes across all panels |
-| Day 6 | App Store + Google Play submission + Go-live |
-
-> **Average go-live: 6 business days from payment confirmation.**
-
----
-
-## Why Not Build From Scratch?
-
-| Factor | Build from Scratch | Miracuves Solution |
-|---|---|---|
-| Time to Launch | 6-12 months | 6 days |
-| Development Cost | $60,000-$150,000 | From $6,699 |
-| Source Code Ownership | Yes | Yes |
-| Customization | Full | Full |
-| Post-Launch Support | Depends on team | 60 days included |
-| Risk | High | Low |
-
----
-
-## Market Opportunity
-
-| Metric | Data |
-|---|---|
-| Super App Market (2030) | $2.5 trillion |
-| SEA Ride-Hailing | $5B+ market |
-
-> Source: Statista, Grand View Research, Allied Market Research
-
----
-
-## Successful Verticals
-
-- Super apps
-- Multi-service platforms
-- Southeast Asia focused apps
-- Urban commuters
-- Food & grocery delivery
-- On-demand services
-- E-commerce logistics
-- Digital payments
-
----
-
-## Client Testimonials
-
-> *"The ride-hailing and food delivery integration is seamless. Our users book rides and order food in one app."*
-> - CEO, Super App
-
-> *"Exceptional results from day one."*
-> - Verified Client
-
-> *"Scaled 3x faster than expected."*
-> - Startup Founder
-
----
-
-## FAQ
-
-**How much?**
-$6,699.
-
-**Ride booking?**
-Yes.
-
-**Food delivery?**
-Yes.
-
-**Wallet?**
-Yes.
-
-**Source code?**
-Yes.
-
-**Launch?**
-6 days.
-
----
-
-## Related Solutions
-
-Explore our other white-label clone solutions:
-
-- [Gojek Clone](https://github.com/Miracuves-Solutions/Gojek-Clone)
-- [Uber Clone](https://github.com/Miracuves-Solutions/Uber-Clone)
-
----
-
-## Resources
-
-- [Full Solution Page](https://miracuves.com/grab-clone/) — features, pricing, demos, FAQ
-
-
-## Get Started
-
-**Ready to launch your multi-service super app?**
-
-| Channel | Link |
-|---|---|
-| Full Solution Page | [miracuves.com/grab-clone](https://miracuves.com/grab-clone/) |
-| Email | info@miracuves.com |
-| WhatsApp | [+91 98300 09649](https://wa.me/919830009649) |
-| Book a Call | [Free Consultation](https://miracuves.com/contact/) |
-
----
-
-## About Miracuves
-
-**Miracuves Solutions Pvt. Ltd.** is a Mumbai-based software company specializing in white-label clone app solutions across 12+ industries.
-
-- 90+ ready-to-deploy solutions
-- 6-day delivery guarantee
-- 60+ engineers on staff
-- 3,900+ apps delivered
-- Full source code ownership
-- Clients across 40+ countries including India and USA
-
-[Explore all 90+ solutions at miracuves.com](https://miracuves.com)
-
----
-
-## Disclaimer
-
-This product is independently developed by Miracuves. All product names, logos, and brands are property of their respective owners. Use of these names does not imply endorsement.
-
----
-
-<div align="center">
-
-*(c) 2026 Miracuves Solutions Pvt. Ltd. | Mumbai, India*
-*This repository contains product documentation only - no proprietary source code is published here.*
-
-</div>
-
-
-*Keywords: grab clone, grab script, white label solution, laravel flutter app, clone script*
-
-
-
----
-
-### Note on This Repository
-
-This repository is a product overview. The full source code is delivered to clients on purchase. For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
-
 
 <!--
-=========================================================
-GENERATED FROM MIRACUVES NETFLIX-CLONE README TEMPLATE
-Canon: 6 working days, from $2,799 floor, 60 days support + 12 months updates.
-Never use 3 days. See https://miracuves.com/facts/ for audited claims.
-=========================================================
+══════════════════════════════════════════════════
+TEMPLATE VARIABLE KEY — auto-generated from Netflix-Clone pattern
+══════════════════════════════════════════════════
+{APP_NAME}        Grab Clone
+{MX_NAME}         MXGrab
+{CATEGORY}        Multi-Service Super App Platform
+{DEMO_WEB}        mxgrab.mimeld.com
+{PRICE}           $6,699
+{SLUG}            grab-clone
+{SOLUTION_URL}    https://miracuves.com/grab-clone/
+{VERTICAL}        super_app
+
+See /tmp/verticals/super_app.txt for the vertical config used to generate this README.
+══════════════════════════════════════════════════
 -->
