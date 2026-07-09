@@ -71,7 +71,7 @@ flowchart LR
 - ✅ 60 days post-launch support + 12 months of free updates
 - ✅ Documentation & handover
 
-**Pricing:** from **$6,699**, transparent on the [solution page](https://miracuves.com/grab-clone/#pricing) — no "contact us for quote" games.
+**Pricing:** from **$2,899**, transparent on the [solution page](https://miracuves.com/grab-clone/#pricing) — no "contact us for quote" games.
 
 ## 🆚 Why Not Build From Scratch?
 
@@ -109,7 +109,7 @@ TEMPLATE VARIABLE KEY — auto-generated from Netflix-Clone pattern
 {MX_NAME}         MXGrab
 {CATEGORY}        Multi-Service Super App Platform
 {DEMO_WEB}        mxgrab.mimeld.com
-{PRICE}           $6,699
+{PRICE}           $2,899
 {SLUG}            grab-clone
 {SOLUTION_URL}    https://miracuves.com/grab-clone/
 {VERTICAL}        super_app
